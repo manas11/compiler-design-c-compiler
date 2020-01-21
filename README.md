@@ -1,5 +1,5 @@
 # Compiler Design - C Compiler
-## Team Members
+## Contributors
 1. Manas Gupta **17CO122** [GitHub Profile](https://github.com/manas11)
 2. Aditya Rastogi **17CO105** [GitHub Profile](https://github.com/aditya-rastogi23)
 3. Animesh Kumar **17CO108** [GitHub Profile](https://github.com/animeshk08)
@@ -16,3 +16,5 @@ The compilation process is a sequence of various phases. Each phase takes input 
 4.  Intermediate Code Generation
 5.  Code Optimization
 6.  Code Generation
+
+## Phases are implemented inside corresponding directories
