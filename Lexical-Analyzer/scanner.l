@@ -8,14 +8,14 @@
 		char name[100];
 		char type[100];
 		int length;
-	}ST[1001];
+	}ST[1007];
 
 	struct constanttable
 	{
 		char name[100];
 		char type[100];
 		int length;
-	}CT[1001];
+	}CT[1007];
 
 	int hash(char *str)
 	{
@@ -23,9 +23,9 @@
 		for(int i = 0 ; i < strlen(str) ; i++)
 		{
 			value = 10*value + (str[i] - 'A');
-			value = value % 1001;
+			value = value % 1007;
 			while(value < 0)
-				value = value + 1001;
+				value = value + 1007;
 		}
 		return value;
 	}
@@ -43,7 +43,7 @@
 		}
 		else
 		{
-			for(int i = value + 1 ; i!=value ; i = (i+1)%1001)
+			for(int i = value + 1 ; i!=value ; i = (i+1)%1007)
 	    	{
 	    		if(strcmp(ST[i].name,str)==0)
 	    		{
@@ -72,7 +72,7 @@
 
 			int pos = 0;
 
-			for (int i = value + 1 ; i!=value ; i = (i+1)%1001)
+			for (int i = value + 1 ; i!=value ; i = (i+1)%1007)
 			{
 				if(ST[i].length == 0)
 				{
@@ -88,7 +88,7 @@
 	}
 	void printST()
 	{
-		for(int i = 0 ; i < 1001 ; i++)
+		for(int i = 0 ; i < 1007 ; i++)
 		{
 			if(ST[i].length == 0)
 			{
@@ -107,7 +107,7 @@
 			return 1;
 		else
 		{
-			for(int i = value + 1 ; i!=value ; i = (i+1)%1001)
+			for(int i = value + 1 ; i!=value ; i = (i+1)%1007)
 			{
 				if(strcmp(CT[i].name,str)==0)
 				{
@@ -134,7 +134,7 @@
 
 			int pos = 0;
 
-			for (int i = value + 1 ; i!=value ; i = (i+1)%1001)
+			for (int i = value + 1 ; i!=value ; i = (i+1)%1007)
 			{
 				if(CT[i].length == 0)
 				{
@@ -150,7 +150,7 @@
 	}
 	void printCT()
 	{
-		for(int i = 0 ; i < 1001 ; i++)
+		for(int i = 0 ; i < 1007 ; i++)
 		{
 			if(CT[i].length == 0)
 				continue;
@@ -223,7 +223,7 @@ int main(int argc , char **argv){
     printf("************************************************************\n");
 
 	int i;
-	for (i=0;i<1001;i++){
+	for (i=0;i<1007;i++){
 		ST[i].length=0;
 		CT[i].length=0;
 	}
