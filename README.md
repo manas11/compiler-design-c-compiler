@@ -20,4 +20,4 @@ The compilation process is a sequence of various phases. Each phase takes input 
 ## Phases are implemented inside corresponding directories
 1. [Lexical Analysis Phase](https://github.com/manas11/compiler-design-c-compiler/tree/master/Lexical-Analyzer
 )
-2. [Syntax Analysis Phase](https://github.com/manas11/compiler-design-c-compiler/tree/master/Parse)
+2. [Syntax Analysis Phase](https://github.com/manas11/compiler-design-c-compiler/tree/master/Parser)
