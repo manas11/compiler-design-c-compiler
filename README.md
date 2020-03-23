@@ -18,7 +18,7 @@ The compilation process is a sequence of various phases. Each phase takes input 
 )
 2. [Syntax Analysis Phase](https://github.com/manas11/compiler-design-c-compiler/tree/master/Parser)
 
-## Contributors and maintainers [&uarr;](#contents)
+## Contributors and maintainers
 
 This project and repository is created and maintained by:
 
