@@ -17,26 +17,23 @@ The compilation process is a sequence of various phases. Each phase takes input 
 1. [Lexical Analysis Phase](https://github.com/manas11/compiler-design-c-compiler/tree/master/Lexical-Analyzer
 )
 2. [Syntax Analysis Phase](https://github.com/manas11/compiler-design-c-compiler/tree/master/Parser)
+3. [Semantic Analysis](https://github.com/manas11/compiler-design-c-compiler/tree/master/Semantic-Analysis)
+4. [Inermediate Code Generation](https://github.com/manas11/compiler-design-c-compiler/tree/master/ICG)
+
 
 ## Contributors and maintainers
 
 This project and repository is created and maintained by:
 
-* **Manas Gupta 171CO122**
-
- Email: manasgupta1109@gmail.com
+* **Manas Gupta**
     
  Github: [manas11](https://github.com/manas11)
     
-* **Animesh Kumar 171CO108**
-
- Email: animuz111@gmail.com
+* **Animesh Kumar**
     
  Github: [animeshk08](https://github.com/animeshk08)
 
  
-* **Aditya Rastogi 171CO105**
-
- Email: adit.rastogi2014@gmail.com
+* **Aditya Rastogi**
     
  Github: [aditya-rastogi23](https://github.com/aditya-rastogi23)
