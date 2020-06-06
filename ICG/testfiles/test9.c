@@ -1,8 +1,15 @@
-// Implicit Error that our Language doesn't support
+// passing wrong parameters to a function
 
-#include<stdio.h>
+#include <stdio.h>
 
-int main() {
-    char @hello;
-    @hello = 'c';
+int callme(int x)
+{
+    return x;
+}
+
+void main()
+{
+    int a1 = 1, a2 = 2;
+
+    callme(a1, a2);
 }

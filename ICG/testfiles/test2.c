@@ -1,24 +1,20 @@
+// exmaple of duplication b assigned twice
+
 #include <stdio.h>
 
-int myfunc(int a,int b)
+void increase_number(int x)
 {
-	return a+b;
+	int x = 20;
+	int y = 10;
+	y = y + x;
+	printf("%d",y);
+	
 }
 
 void main()
 {
-	int a,b,i;
-
-	while(a<3)
-	{
-		a = a+b;
-		for(i=0;i<b;i++)
-		{
-			b++;
-			myfunc(a,b);
-
-		}
-		a++;
-	}
-	
+	int x = 2;
+	x = 4;
+	increase_number(x);
+	printf("%d", x);
 }

@@ -1,3 +1,5 @@
+// simple hello world printing in while loop
+
 #include <stdio.h>
 
 void main()
@@ -7,9 +9,5 @@ void main()
 		printf("hello world");
 		x--;
 	}
-	// int i,n;
-	// 	do
-	// 	{
-	// 		printf("hi");
-	// 	}while(i<n);
+
 }

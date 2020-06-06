@@ -1,13 +1,18 @@
-#include<stdio.h>
-#define NUM 5
+// calculating cube, but duplicate assignment here
+
+#include <stdio.h>
+int cube(int v)
+{
+	int v = 3;
+	int cube = v * v * v;
+	return cube;
+}
 
 int main()
 {
-char A[] = "#define MAX 10";
-char B[ ] = "Hello";
-char ch  = 'B';
-unsigned int a = 1;
-printf("String = %s Value of Pi = %f", 3.14);
+	int x = 3;
+	int ans = cube(x);
+	printf("answer: %d", ans);
 
- 	return 0;
+	return 0;
 }

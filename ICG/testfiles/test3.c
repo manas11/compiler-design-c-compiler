@@ -1,25 +1,17 @@
-#include<stdio.h>
+// normal example of calcuating modulus using a function
 
-int main()
+#include <stdio.h>
+
+int modulus(int a, int b)
 {
-	int a = 5;
-	while(a>0)
-	{
-		printf("Hello world");
-		a--;
-	}
+	int x = a % b;
+	return x;
+}
 
-	a=4;
-	while(a>0)
-	{
-		printf("%d",a);
-		a--;
-		int b;
-		b= 4;
-		while(b>0)
-		{
-			printf("%d", b);
-			b--;
-		}
-	}
+void main()
+{
+	int a = 2;
+	int b = 10;
+	int ans = modulus(b, a);
+	printf("ans: %d", ans);
 }

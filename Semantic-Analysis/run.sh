@@ -12,7 +12,7 @@ function run() {
 		do
 			echo -ne "_"
 		done
-		echo -ne "Testing case number $start"
+		echo -ne "Testing case number $start in progress"
 		for i in {1..40}
 		do
 			echo -ne "_"
@@ -21,6 +21,8 @@ function run() {
 		local filename="tests/test"$start".c"
 		./a.out $filename
 		((start++))
+				printf "\n\n"
+
 	done
 }
 
