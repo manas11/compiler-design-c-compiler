@@ -202,7 +202,7 @@ return_statement
 			: RETURN ';' {if(strcmp(currfunctype,"void")) {printf("Returning void of a non-void function\n"); exit(0);}}
 			| RETURN expression ';' { 	if(!strcmp(currfunctype, "void"))
 										{ 
-											yyerror("Function is void");
+											yyerror("Function returns something but is declared void");
 										}
 
 										if((currfunctype[0]=='i' || currfunctype[0]=='c') && $2!=1)
@@ -340,7 +340,7 @@ immutable
 call
 			: identifier '('{
 			             if(!check_declaration(curid, "Function"))
-			             { printf("Function not declared"); exit(0);} 
+			             { printf("Need to declare function"); exit(0);} 
 			             insertSTF(curid); 
 						 strcpy(currfunccall,curid);
 			             } arguments ')' 
@@ -348,8 +348,7 @@ call
 							{ 
 								if(getSTparamscount(currfunccall)!=call_params_count)
 								{	
-									yyerror("Number of arguments in function call doesn't match number of parameters");
-									//printf("Number of arguments in function call %s doesn't match number of parameters\n", currfunccall);
+									yyerror("function arguments required does not match the passed arguments...");
 									exit(8);
 								}
 							} 

@@ -1,14 +1,18 @@
+//error test for function return mismatch
 #include<stdio.h>
 
-int main()
+void voidReturningFunc(int a)
 {
-	int a = 2;
-	printf("%d",a);
-	a++;
-	int b = 4;
-	int c = 3; 
-	
-	//int b = 8;
-	//int c = 3;
-	a--;
+    int abc=1;
+    return a;
+}
+
+void main()
+{
+    int i,n;
+
+    voidReturningFunc(i);
+
+    printf("%d",i)
+
 }

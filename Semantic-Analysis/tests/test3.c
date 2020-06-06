@@ -1,5 +1,7 @@
 #include<stdio.h>
 
+//correct test for better scope understanding with multiple while loops
+
 int main()
 {
 	int a = 5;

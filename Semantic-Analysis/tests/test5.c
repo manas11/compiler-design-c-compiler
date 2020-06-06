@@ -1,13 +1,14 @@
+//correct test with empty function
 #include<stdio.h>
-#define NUM 5
 
-int main()
+int f1(float c, float d)
 {
-char A[] = "#define MAX 10";
-char B[ ] = "Hello";
-char ch  = 'B';
-unsigned int a = 1;
-printf("String = %s Value of Pi = %f", 3.14);
 
- 	return 0;
+}
+
+void main()
+{
+	float a,e;
+	float b;
+	f1(e, b);
 }

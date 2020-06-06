@@ -1,5 +1,10 @@
-#include <stdio.h>
-int main()
+//error with undeclared function
+#include<stdio.h>
+
+void main()
 {
-	int 9abi = 10;
+    int i,n;
+
+    fun(i);
+    
 }
