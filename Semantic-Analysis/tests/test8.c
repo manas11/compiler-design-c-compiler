@@ -1,22 +1,15 @@
-// Mixture of tests, comments
-
+//number of params error
 #include<stdio.h>
-int main()
+
+int fun(int a)
 {
-	int a, b;
-	char c;
-	for(a = 0; a < 29; a++)
-	{
-		if(a < 15) {
-			printf("Hello World");
-		}
-	}
-	int x = a + b;
-	// Single Line Comment
-	/* This is a 
-	   multi-line comment */ 
-	   
-	int var1;
-	char var2;
-	printf("%d",x);
+    return a;
+}
+
+void main()
+{
+    int b,c;
+
+    fun(b,c);
+    
 }

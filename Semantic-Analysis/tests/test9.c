@@ -1,8 +1,7 @@
-// Implicit Error that our Language doesn't support
+// Lexical error for starting with int
 
 #include<stdio.h>
 
 int main() {
-    char @hello;
-    @hello = 'c';
+    int 1abc=0;
 }

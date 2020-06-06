@@ -1,5 +1,7 @@
 #include<stdio.h>
 
+//correct test with simple func declaration and while loop
+
 int myfunc(int b)
 {
     int x;
@@ -15,7 +17,7 @@ void main()
     int a[10];
     for (i=0;i<10;i++){
         if(i<10){
-            int x;
+            int y;
             while(x<10){
                 x++;
             }

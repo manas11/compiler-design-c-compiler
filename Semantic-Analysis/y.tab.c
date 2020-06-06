@@ -595,8 +595,8 @@ static const yytype_uint16 yyrline[] =
      277,   280,   281,   285,   286,   289,   290,   293,   293,   293,
      294,   294,   294,   297,   298,   301,   302,   305,   306,   309,
      309,   309,   312,   313,   316,   328,   328,   336,   337,   338,
-     341,   341,   359,   359,   362,   362,   365,   365,   366,   369,
-     370,   371,   372
+     341,   341,   358,   358,   361,   361,   364,   364,   365,   368,
+     369,   370,   371
 };
 #endif
 
@@ -1639,7 +1639,7 @@ yyreduce:
 #line 203 "parser.y" /* yacc.c:1646  */
     { 	if(!strcmp(currfunctype, "void"))
 										{ 
-											yyerror("Function is void");
+											yyerror("Function returns something but is declared void");
 										}
 
 										if((currfunctype[0]=='i' || currfunctype[0]=='c') && (yyvsp[-1])!=1)
@@ -1876,7 +1876,7 @@ yyreduce:
 #line 341 "parser.y" /* yacc.c:1646  */
     {
 			             if(!check_declaration(curid, "Function"))
-			             { printf("Function not declared"); exit(0);} 
+			             { printf("Need to declare function"); exit(0);} 
 			             insertSTF(curid); 
 						 strcpy(currfunccall,curid);
 			             }
@@ -1889,53 +1889,52 @@ yyreduce:
 							{ 
 								if(getSTparamscount(currfunccall)!=call_params_count)
 								{	
-									yyerror("Number of arguments in function call doesn't match number of parameters");
-									//printf("Number of arguments in function call %s doesn't match number of parameters\n", currfunccall);
+									yyerror("function arguments required does not match the passed arguments...");
 									exit(8);
 								}
 							} 
 						 }
-#line 1899 "y.tab.c" /* yacc.c:1646  */
+#line 1898 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 134:
-#line 362 "parser.y" /* yacc.c:1646  */
+#line 361 "parser.y" /* yacc.c:1646  */
     { call_params_count++; }
-#line 1905 "y.tab.c" /* yacc.c:1646  */
+#line 1904 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 136:
-#line 365 "parser.y" /* yacc.c:1646  */
+#line 364 "parser.y" /* yacc.c:1646  */
     { call_params_count++; }
-#line 1911 "y.tab.c" /* yacc.c:1646  */
+#line 1910 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 139:
-#line 369 "parser.y" /* yacc.c:1646  */
+#line 368 "parser.y" /* yacc.c:1646  */
     {  insV(); (yyval)=1; }
-#line 1917 "y.tab.c" /* yacc.c:1646  */
+#line 1916 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 140:
-#line 370 "parser.y" /* yacc.c:1646  */
+#line 369 "parser.y" /* yacc.c:1646  */
     {  insV(); (yyval)=-1;}
-#line 1923 "y.tab.c" /* yacc.c:1646  */
+#line 1922 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 141:
-#line 371 "parser.y" /* yacc.c:1646  */
+#line 370 "parser.y" /* yacc.c:1646  */
     {  insV(); }
-#line 1929 "y.tab.c" /* yacc.c:1646  */
+#line 1928 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 142:
-#line 372 "parser.y" /* yacc.c:1646  */
+#line 371 "parser.y" /* yacc.c:1646  */
     {  insV();(yyval)=1; }
-#line 1935 "y.tab.c" /* yacc.c:1646  */
+#line 1934 "y.tab.c" /* yacc.c:1646  */
     break;
 
 
-#line 1939 "y.tab.c" /* yacc.c:1646  */
+#line 1938 "y.tab.c" /* yacc.c:1646  */
       default: break;
     }
   /* User semantic actions sometimes alter yychar, and that requires
@@ -2163,7 +2162,7 @@ yyreturn:
 #endif
   return yyresult;
 }
-#line 374 "parser.y" /* yacc.c:1906  */
+#line 373 "parser.y" /* yacc.c:1906  */
 
 
 extern FILE *yyin;

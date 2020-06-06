@@ -1,6 +1,6 @@
 #include<stdio.h>
 
-
+//correct test all operators
 
 void main(){
 	int a,b,c,d,e,f,g,h;

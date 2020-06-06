@@ -1,23 +1,19 @@
-//for loop
-//continue
-//while loop
-//do while loop
-
+//correct test for all loops
 #include<stdio.h>
 
 int main()
 {
-    int a=0;
-    for (a = 0; a < 10; a++)
+    int b=0;
+    for (b = 0; b < 10; b++)
         {
-        	printf("H1");
+        	printf("H3ll0");
         }
     
-    while(a>0) {
-        a--;
+    while(b>0) {
+        b-=2;
     }
 
     do {
-        a++;
-    }while(a<10);
+        b+=5;
+    }while(b<10);
 }
